@@ -11,11 +11,16 @@ export const name = 'shopCart'
 export const properties = {
     template: `
      <div>Shop cart
-        {{ $ctrl.items | json}}
+        <div ng-repeat="item in $ctrl.items">
+               <span>{{ item.name }}</span> 
+               <span>- {{ item.price }}</span>
+        </div>
+        <p>Total amount {{$ctrl.amount}}</p>
      </div>
     `,
     bindings: {
-        items: '<items'
+        items: '<items',
+        amount: '<amount'
     },
     controller: ShopCartController
 }
