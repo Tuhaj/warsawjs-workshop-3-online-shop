@@ -13,8 +13,8 @@ export const name = "productItem"
 // export const test = 'my precious'
 const template =     ` 
  <div>
-    <h2>{{ $ctrl.product.name }}</h2> 
-    <p>for only {{ $ctrl.product.price }}</p>
+    <h2>{{ $ctrl.product.name | uppercase }}</h2> 
+    <p>for only {{ $ctrl.product.price | currency}}</p>
     <p>{{ $ctrl.product.description}}</p>
     <p>Add to cart</p>
     <form name="itemForm">
