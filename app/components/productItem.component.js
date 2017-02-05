@@ -1,10 +1,13 @@
 export const name = "productItem"
-
+// export const test = 'my precious'
 const template =     ` 
  <div>
-    Item
+    {{ test }} {{ $ctrl.product.name }} for only {{ $ctrl.product.price }}
  </div>
 `
 export const properties = {
-    template: template
+    template,
+    bindings: {
+        product: '<item'
+    }
 }
