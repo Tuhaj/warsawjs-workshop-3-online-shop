@@ -1,13 +1,27 @@
+class ProductItemController {
+    countPicked(count) {
+        this.addToCart({amount: count})
+    }
+}
+
+
 export const name = "productItem"
 // export const test = 'my precious'
 const template =     ` 
  <div>
-    {{ test }} {{ $ctrl.product.name }} for only {{ $ctrl.product.price }}
+    <h2>{{ $ctrl.product.name }}</h2> 
+    <p>for only {{ $ctrl.product.price }}</p>
+    <p>{{ $ctrl.product.description}}</p>
+    <p>Add to cart</p>
+    <button ng-click="$ctrl.countPicked()">Dodaj do koszyka</button>
+
  </div>
 `
 export const properties = {
     template,
     bindings: {
-        product: '<item'
-    }
+        product: '<item',
+        addToCart: '&onAddToCart'
+    },
+    controller: ProductItemController
 }

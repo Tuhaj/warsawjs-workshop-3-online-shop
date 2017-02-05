@@ -4,7 +4,7 @@ export const name = "pageFooter"
 export const properties = {
     template: `
     <div>
-      Footer with data!
+        <shop-logo size="small"></shop-logo>
     </div>
   `
 }
