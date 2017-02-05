@@ -1,11 +1,7 @@
 export const name = "productsList"
 
-const template =     ` 
- <div>
-    {{ $ctrl.products | json }}
-    <h2>Products</h2>
-    <product-item></product-item>
- </div>
+const template = ` 
+  <product-item ng-repeat="product in $ctrl.products"></product-item>
 `
 export const properties = {
     template,
