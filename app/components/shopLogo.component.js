@@ -3,11 +3,12 @@ class ShopLogoController {
         console.log('hello controller!')
         this.source = '../images/warsawjs-logo.png'
         this.width = 'auto'
+        this.sizes = new Map([['medium', 'small'], ['250px', '100px']])
     }
 
     $onInit() {
         if (this.size === 'medium') {
-            this.width = '250px'
+            this.width = 250
         } else if(this.size === 'small') {
             this.width = '100px'
         }
