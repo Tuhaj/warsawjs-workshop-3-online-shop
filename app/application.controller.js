@@ -1,13 +1,8 @@
 export default class ApplicationController {
-    constructor() {
-        this.products = [
-            {name: 'Orange', price: 10},
-            {name: 'Banana', price: 20}
-        ]
-        this.promotedProducts = [
-            {name: 'Apple', price: 5},
-            {name: 'Pineapple', price: 10}
-        ]
+    constructor(productsService) {
+        this.productsService = productsService
+        this.products = productsService.products
+        this.promotedProducts = productsService.promotedProducts
         this.inCartProducts = []
         this.totalPrice = 0
     }

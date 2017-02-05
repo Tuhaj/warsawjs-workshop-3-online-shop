@@ -1,6 +1,4 @@
 class ShopCartController {
-    constructor() {
-    }
 
     $onInit() {
         console.log('in cart!', this.items)

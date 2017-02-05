@@ -1,6 +1,5 @@
 class ShopLogoController {
     constructor() {
-        console.log('hello controller!')
         this.source = '../images/warsawjs-logo.png'
         this.width = 'auto'
         // this.sizes = new Map([['medium', 'small'], ['250px', '100px']]) // refactor onInit with it!
