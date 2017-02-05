@@ -19,7 +19,7 @@ const template =     `
     <p>Add to cart</p>
     <form name="itemForm">
         <input type="number" ng-model="$ctrl.count" min="1", max="100">
-        <button ng-disabled="itemForm.$invalid" ng-click="$ctrl.countPicked()">Dodaj do koszyka</button>
+        <button ng-disabled="itemForm.$invalid" ng-click="$ctrl.countPicked($ctrl.count)">Dodaj do koszyka</button>
     </form>
 
  </div>

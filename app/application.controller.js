@@ -19,10 +19,13 @@ export default class ApplicationController {
         if(element) {
             console.log('already in cart!')
         } else {
+            console.log(amount)
             this.totalPrice += ( amount * product.price)
             console.log('particular', product.price)
             console.log('total', this.totalPrice)
             this.inCartProducts.push(product)
         }
+        // const addedProduct =  angular.extend(angular.copy(product), {amount})
+        // this.inCartProducts.push(addedProduct)
     }
 }

@@ -20,7 +20,7 @@ export const properties = {
     `,
     bindings: {
         items: '<items',
-        amount: '<totalPrice'
+        totalPrice: '<totalPrice'
     },
     controller: ShopCartController
 }
