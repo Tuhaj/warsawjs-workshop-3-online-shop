@@ -9,7 +9,7 @@ export default class ApplicationController {
             {name: 'Pineapple', price: 10}
         ]
         this.inCartProducts = []
-        this.amount = 0
+        this.totalPrice = 0
     }
 
     addProductToCart(product, amount) {
@@ -19,7 +19,9 @@ export default class ApplicationController {
         if(element) {
             console.log('already in cart!')
         } else {
-            this.amount += amount;
+            this.totalPrice += ( amount * product.price)
+            console.log('particular', product.price)
+            console.log('total', this.totalPrice)
             this.inCartProducts.push(product)
         }
     }

@@ -15,12 +15,12 @@ export const properties = {
                <span>{{ item.name }}</span> 
                <span>- {{ item.price }}</span>
         </div>
-        <p>Total amount {{$ctrl.amount}}</p>
+        <p>Total price {{$ctrl.totalPrice}}</p>
      </div>
     `,
     bindings: {
         items: '<items',
-        amount: '<amount'
+        amount: '<totalPrice'
     },
     controller: ShopCartController
 }
