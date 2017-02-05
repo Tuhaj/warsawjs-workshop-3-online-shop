@@ -1,6 +1,6 @@
 class ProductItemController {
     countPicked(count) {
-        this.addToCart({amount: count})
+        this.addToCart({amount: 10})
     }
 }
 

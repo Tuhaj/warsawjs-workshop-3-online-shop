@@ -8,9 +8,11 @@ export default class ApplicationController {
             {name: 'Apple', price: 5},
             {name: 'Pineapple', price: 10}
         ]
+        this.inCartProducts = [{name: 'Apple', price: 5}]
     }
 
-    requestAddToCart() {
-        console.log('test request add to cart')
+    addProductToCart(product, amount) {
+        console.log(product)
+        console.log(amount)
     }
 }

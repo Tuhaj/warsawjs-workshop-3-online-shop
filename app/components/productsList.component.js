@@ -4,7 +4,7 @@ class ProductsListController {
     }
 
     addToCart(product, amount) {
-        this.requestAddToCart({product: product, amount: amount})
+        this.addProductToCart({product: product, amount: amount})
     }
 
 }
@@ -19,7 +19,7 @@ export const properties = {
     template,
     bindings: {
         products: '<items',
-        requestAddToCart: "&onAddToCart"
+        addProductToCart: "&onAddToCart"
     },
     controller: ProductsListController
 }
