@@ -9,4 +9,8 @@ export default class ApplicationController {
             {name: 'Pineapple', price: 10}
         ]
     }
+
+    requestAddToCart() {
+        console.log('test request add to cart')
+    }
 }

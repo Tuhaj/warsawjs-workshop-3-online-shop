@@ -19,7 +19,7 @@
 </page-header>
 <page-content>
     <promotions-list items="ctrl.promotedProducts"></promotions-list>
-    <products-list items="ctrl.products" on-add-to-cart="$ctrl.addToCart(product, amount)"></products-list>
+    <products-list items="ctrl.products" on-add-to-cart="ctrl.requestAddToCart(product, amount)"></products-list>
 </page-content>
 <page-footer></page-footer>
 

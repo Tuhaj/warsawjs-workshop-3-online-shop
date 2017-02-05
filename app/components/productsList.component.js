@@ -4,8 +4,9 @@ class ProductsListController {
     }
 
     addToCart(product, amount) {
-        console.log('dziala!')
+        this.requestAddToCart({product: product, amount: amount})
     }
+
 }
 
 export const name = "productsList"
