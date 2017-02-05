@@ -1,6 +1,13 @@
 class ShopLogoController {
     constructor() {
         console.log('hello controller!')
+        this.source = '../images/warsawjs-logo.png'
+        this.width = 'auto'
+        this.sizes = new Map([['medium', '100px'], ['small', '30px']])
+    }
+
+    $onInit() {
+        console.log(this.size)
     }
 }
 
@@ -8,7 +15,7 @@ export const name = "shopLogo"
 
 export const properties = {
     template: `
-        <img src="https://raw.githubusercontent.com/mateuszkocz/warsawjs-workshop-3-online-shop/development/app/images/warsawjs-logo.png" />
+        <img ng-src="{{ $ctrl.source }}" width="{{ $ctrl.width }}" />
     `,
     controller: ShopLogoController,
     bindings: {
