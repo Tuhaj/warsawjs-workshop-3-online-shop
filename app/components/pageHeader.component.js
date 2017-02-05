@@ -1,11 +1,17 @@
-export const name = "pageHeader"
-
-const template =     ` 
- <header>
-     Hack Finn is the best!
+const template = `
+<header>
+  <div>
     <shop-logo size="medium"></shop-logo>
- </header>
-`
+    <div ng-transclude="controls"></div>
+  </div>
+  <div ng-transclude="bar"></div>
+</header>`
+
+export const name = 'pageHeader'
 export const properties = {
-    template: template
+    template, // equivalent od `template: template`
+    transclude: {
+        controls: 'pageHeaderControls',
+        bar: 'pageHeaderBar'
+    }
 }
