@@ -3,6 +3,7 @@
  */
 export class ProductsService {
     constructor($http) {
+        this.http = $http;
     }
 
     get products() {
@@ -20,7 +21,9 @@ export class ProductsService {
     }
 
     loadProducts() {
-
+        this.http.get('http://127.0.0.1:8001/products')
+            .then(response => response.data)
+            .then(data => console.log(data))
     }
 }
 

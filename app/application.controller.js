@@ -7,6 +7,11 @@ export default class ApplicationController {
         this.totalPrice = 0
     }
 
+    $onInit() {
+        this.productsService.loadProducts();
+    }
+
+
     addProductToCart(product, amount) {
         let element = this.inCartProducts.find(function (cartProduct) {
             return cartProduct.name === product.name
