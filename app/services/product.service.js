@@ -4,13 +4,13 @@
 export class ProductsService {
     constructor($http) {
         this.http = $http;
+        this.productsStore = {
+            normal: []
+        }
     }
 
     get products() {
-        return [
-            {name: 'Orange', price: 10},
-            {name: 'Banana', price: 20}
-        ]
+        return this.productsStore.normal;
     }
 
     get promotedProducts() {
@@ -23,7 +23,9 @@ export class ProductsService {
     loadProducts() {
         this.http.get('http://127.0.0.1:8001/products')
             .then(response => response.data)
-            .then(data => console.log(data))
+            .then(products => {
+                this.productsStore.normal = products
+            })
     }
 }
 

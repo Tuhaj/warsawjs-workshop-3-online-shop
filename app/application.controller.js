@@ -1,10 +1,13 @@
 export default class ApplicationController {
     constructor(productsService) {
         this.productsService = productsService
-        this.products = productsService.products
         this.promotedProducts = productsService.promotedProducts
         this.inCartProducts = []
         this.totalPrice = 0
+    }
+
+    get products() {
+        return this.productsService.products;
     }
 
     $onInit() {
